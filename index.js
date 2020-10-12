@@ -17,7 +17,13 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 18;
 
+if (votingAge >= 18) {
+  console.log("You are good to vote!");
+}
+
+console.log(votingAge);
 
 
 /*
@@ -30,6 +36,8 @@ Do the following:
 
    HINT: no function required
 */
+let x = 1;
+let y = 2;
 
 
 
@@ -46,7 +54,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+let year = '1999';
+let integer = Number(year);
 
+console.log(integer);
 
 
 /*
@@ -58,8 +69,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+
+// Parameters = foo bar banana of input (given values)
+
+function multiply(num1, num2){
+    return num1 * num2
   }
 
 
@@ -74,8 +88,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYear){
+    return humanYear * 7
 }
 
 
@@ -107,9 +121,18 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(dogPounds, dogYears){
+    if (dogPounds <= 5 && dogYears >= 1){
+      return dogPounds * .05
+    } else if (dogPounds >= 6 && dogPounds <= 10){
+      return dogPounds * .04
+    } else if (dogPounds >= 11 && dogPounds <= 15){
+      return dogPounds * .03
+    } else if (dogPounds > 15){
+        return dogPounds * .02
+    }
   }
+
 
 
 
@@ -132,8 +155,16 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(user, computer){
-    /*add your code here*/
+const computerChoice = Math.random() * 2;
+
+function game(user, computerChoice){
+  if (rock, scissor) {
+    return "You Win!"
+  } else if (user < computerChoice) {
+    return "You Lose!"
+  } else {
+    return "It's a tie"
+  }
 }
   
   
