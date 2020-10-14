@@ -155,15 +155,23 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-const computerChoice = Math.random() * 2;
+let computerChoice = Math.random(0, 1)
 
-function game(user, computerChoice){
-  if (rock, scissor) {
-    return "You Win!"
-  } else if (user < computerChoice) {
-    return "You Lose!"
-  } else {
-    return "It's a tie"
+function game(choice1, choice2){
+  if (choice1 === "paper") {
+    if (choice2 === "rock") return "you win!";
+      else if (choice2 === "scissors") return "you lose!";
+      else if (choice2 === "paper") return "it's a tie";
+    }
+  if (choice1 === "rock") {
+    if (choice2 === "rock") return "it's a tie";
+      else if (choice2 === "scissors") return "you win!";
+      else if (choice2 === "paper") return "you lose!";
+  }
+  if (choice1 === "scissors") {
+    if (choice2 === "rock") return "you lose!";
+      else if (choice2 === "scissors") return "it's a tie";
+      else if (choice2 === "paper") return "you win!";
   }
 }
   
@@ -180,9 +188,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(kilometers){
+  return kilometers * 0.621371
+}
+  
 
 
 
@@ -194,8 +203,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+  return cm / 30.48
   }
  
 
@@ -210,9 +219,14 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong (counter) {
+  
+    for (let i = counter; i > 4; i--) {
+      return (`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`);
   }
+}
+    
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -230,9 +244,13 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
-  }
+function grade(testScore){
+  if (testScore >=90 && testScore <= 100) return "you got an A";
+    else if (testScore >=80 && testScore <= 89) return "you got a B";
+    else if (testScore >=70 && testScore <= 79) return "you got a C";
+    else if (testScore >=60 && testScore <= 69) return "you got a D";
+    else if (testScore <60) return "you got an F";
+}
   
   
   
